@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Card Details Form</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="card">
+        <p class="card__number" id="cardNumber"></p>
+        <p class="card__name" id="cardName"></p>
+        <p class="card__date" id="cardDate"></p>
+        <img src="images/bg-card-front.png" />
+        <img src="images/bg-card-back.png" />
+        <p class="card__code" id="cardPin"></p>
+      </div>
+      <div class="background">
+        <img src="images/bg-main-desktop.png" />
+      </div>
+
+      <main class="content">
+        <form class="form" id="form">
+          <fieldset class="form__content">
+            <div>
+              <label>Portador do cartão</label>
+              <input
+                type="text"
+                placeholder="ex. Lucas Passeli"
+                maxlength="15"
+                id="inputName"
+              />
+            </div>
+            <div>
+              <label>Número do cartão</label>
+              <input
+                type="text"
+                placeholder="ex. 1234 5678 0000"
+                maxlength="16"
+                id="inputNumber"
+              />
+            </div>
+            <div class="form__about --card-info">
+              <div>
+                <label> Data (MM/AA)</label>
+                <div class="form__about --data">
+                  <input
+                    maxlength="2"
+                    type="text"
+                    placeholder="MM"
+                    id="inputDataMonth"
+                  />
+                  <input
+                    maxlength="2"
+                    type="text"
+                    placeholder="AA"
+                    id="inputDataYear"
+                  />
+                </div>
+              </div>
+              <div>
+                <label>CDC</label>
+                <input
+                  maxlength="3"
+                  type="text"
+                  placeholder="ex. 123"
+                  id="inputPin"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <input
+            type="button"
+            value="Confirmar"
+            class="button"
+            id="inputSubmit"
+          />
+        </form>
+
+        <div class="finish --hidden" id="finish">
+          <img src="images/icon-complete.svg" />
+          <h1>Obrigado!</h1>
+          <p class="finish__text">Nós adicionamos os dados do seu cartão.</p>
+          <input type="button" value="Continuar" class="button" />
+        </div>
+      </main>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
